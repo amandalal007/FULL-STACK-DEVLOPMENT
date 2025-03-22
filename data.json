@@ -1,0 +1,36 @@
+{
+    "platform": {
+      "name": "Pocketfy",
+      "menu": [
+        { "icon": "bx bxs-bolt-circle", "label": "Explore", "link": "#" },
+        { "icon": "bx bxs-volume-full", "label": "Genres", "link": "#" },
+        { "icon": "bx bxs-album", "label": "Albums", "link": "#" },
+        { "icon": "bx bxs-microphone", "label": "Artists", "link": "#" },
+        { "icon": "bx bxs-radio", "label": "Podcasts", "link": "#" }
+      ],
+      "library": [
+        { "icon": "bx bx-undo", "label": "Recent", "link": "#" },
+        { "icon": "bx bxs-photo-album", "label": "Albums", "link": "#" },
+        { "icon": "bx bxs-heart", "label": "Favourites", "link": "#" },
+        { "icon": "bx bxs-folder", "label": "Local", "link": "#" }
+      ],
+      "playlist": [
+        { "icon": "bx bxs-plus-square", "label": "Create New", "link": "#" },
+        { "icon": "bx bxs-caret-right-circle", "label": "Best of 2024", "link": "#" },
+        { "icon": "bx bxs-caret-right-circle", "label": "Best of Aman", "link": "#" },
+        { "icon": "bx bxs-caret-right-circle", "label": "Talwinder", "link": "#" }
+      ],
+      "trending": {
+        "title": "Berserk",
+        "type": "Playlist",
+        "plays": "63 Million Plays",
+        "image": "assets/trend.webp"
+      },
+      "songs": [
+        { "id": 1, "title": "Nasha", "artist": "Talwinder", "duration": "04:33", "image": "assets/song1.jpg" },
+        { "id": 2, "title": "The Way U Look", "artist": "Talwinder", "duration": "04:35", "image": "assets/song2.jpg" },
+        { "id": 3, "title": "Samjho Na", "artist": "Talwinder", "duration": "04:22", "image": "assets/song3.jpg" },
+        { "id": 4, "title": "Tu", "artist": "Talwinder", "duration": "03:17", "image": "assets/song4.jpg" }
+      ]
+    }
+  }

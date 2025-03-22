@@ -10,6 +10,7 @@
 </head>
 
 <body> 
+    
 
     <div class="container">
         <aside class="sidebar">
@@ -79,7 +80,7 @@
 
                 <div class="search">
                     <i class='bx bx-search'></i>
-                    <input type="text" placeholder="Type here to search" aria-label="Search music">
+                    <input type="text" id="search-bar" placeholder="Type here to search" aria-label="Search music">
                 </div>
             </header>
 
@@ -101,7 +102,7 @@
 
             <section class="playlist">
                 <div class="genres">
-                    <div class ="header">
+                    <div class="header">
                         <h5>Genres</h5>
                         <a href="#">See all</a>
                     </div>
@@ -116,14 +117,14 @@
                     </div>
                 </div>
 
-                <div class="music-list">
+                <div class="music-list" id="music-list">
                     <div class="header">
                         <h5>Top Songs</h5>
-                        <a href="#">See all</a>
+                        <a href="public/songs.html">See all</a>
                     </div>
 
                     <div class="items">
-                        <div class="item">
+                        <div class="item" data-name="Nasha">
                             <div class="info">
                                 <p>01</p>
                                 <img src="assets/song1.jpg" alt="Nasha">
@@ -138,7 +139,7 @@
                                 <i class='bx bxs-plus-square'></i>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-name="The Way U Look">
                             <div class="info">
                                 <p>02</p>
                                 <img src="assets/song2.jpg" alt="The Way u Look">
@@ -153,7 +154,7 @@
                                 <i class='bx bxs-plus-square'></i>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-name="Samjho Na">
                             <div class="info">
                                 <p>03</p>
                                 <img src="assets/song3.jpg" alt="Samjho Na">
@@ -168,7 +169,7 @@
                                 <i class='bx bxs-plus-square'></i>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-name="Tu">
                             <div class="info">
                                 <p>04</p>
                                 <img src="assets/song4.jpg" alt="Tu">
@@ -242,7 +243,26 @@
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+    <script>
+        // Add search functionality
+        document.getElementById('search-bar').addEventListener('input', function() {
+            const searchQuery = this.value.toLowerCase();
+            const musicItems = document.querySelectorAll('.music-list .item');
+            
+            musicItems.forEach(function(item) {
+                const songName = item.getAttribute('data-name').toLowerCase();
+                
+                if (songName.includes(searchQuery)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
